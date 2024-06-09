@@ -2,32 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 500;
-  box-sizing: border-box;
-  color: #ffffff;
-  background-color: #e50914;
-  border-radius: 0.25rem;
-  transition-duration: 250ms;
-  transition-property: color, background-color;
-  transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
-}
-
-.btn:hover {
-  background-color: #c11119;
-  transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
-}
-
-.btn:focus {
-  outline-style: solid;
-  outline-width: 2px;
-  outline-offset: 2px;
-  outline-color: #ffffff;
-}
-
 .select {
   @apply text-white bg-transparent appearance-none focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-white rounded;
 }

@@ -7,7 +7,7 @@ export default function SignInButton() {
         <Button
           href="/login"
           role="button"
-          className="btn px-4 py-1 w-auto min-h-8 text-sm leading-[0.875rem]"
+          className="px-4 py-1 w-auto min-h-8 text-sm leading-[0.875rem]"
         >
           Sign in
         </Button>
