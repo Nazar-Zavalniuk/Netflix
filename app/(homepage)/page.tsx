@@ -1,3 +1,4 @@
+import { GetStartedSection } from "./components/get-started-section";
 import { Header } from "./components/header";
 
 export default function Homepage() {
@@ -5,7 +6,7 @@ export default function Homepage() {
     <>
       <Header />
       <main>
-        <h1>Start project</h1>
+        <GetStartedSection />
       </main>
     </>
   );

@@ -1,19 +1,26 @@
-import ArrowDownImg from "./images/arrow-down-img";
-import LanguageImg from "./images/language-img";
+import CaretDownIcon from "./icons/caret-down";
+import LanguageIcon from "./icons/language";
+import styles from "./language-select.module.css";
 
-export default function LanguageSelect() {
+export function LanguageSelect() {
   return (
     <div className="inline-flex flex-[0_auto] ml-2 w-auto md:ml-6">
       <span className="block text-white">
         <div className="inline-flex relative">
           <label
             htmlFor="language-select"
-            className="pointer-events-none select-none absolute left-9 top-0 z-[1] w-0 h-0 overflow-hidden"
+            className="pointer-events-none select-none absolute left-9 top-0 z-10 w-0 h-0 overflow-hidden"
           >
             Select language
           </label>
           <div className="inline-flex text-base font-normal items-center relative z-0">
-            <LanguageImg />
+            <div
+              role="img"
+              aria-hidden="true"
+              className="absolute w-4 h-4 left-3 right-auto pointer-events-none"
+            >
+              <LanguageIcon />
+            </div>
             <select
               id="language-select"
               name="LanguageSelect"
@@ -37,7 +44,9 @@ export default function LanguageSelect() {
                 English
               </option>
             </select>
-            <ArrowDownImg />
+            <div aria-hidden="true" className={styles.caretDownIconWrapper}>
+              <CaretDownIcon />
+            </div>
           </div>
         </div>
       </span>

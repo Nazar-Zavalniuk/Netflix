@@ -1,6 +1,6 @@
 import { Button } from "@/common/components/button";
 
-export default function SignInButton() {
+export function SignInButton() {
   return (
     <div className="inline-flex ml-2 box-border md:ml-6">
       <div className="flex">

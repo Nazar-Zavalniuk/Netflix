@@ -2,24 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-.select {
-  @apply text-white bg-transparent appearance-none focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-white rounded;
-}
-
 .fonts {
   font-family: var(--font-roboto), var(--font-ubuntu), sans-serif;
 }
 
-.responsive-header {
-  @apply sm:px-8 lg:max-w-[calc(83.334%-(3rem*2))] lg:px-12 xl:max-w-[calc(66.666%-(3rem*2))];
+.select {
+  appearance: none;
+  color: #ffffff;
+  background: transparent;
+  border-radius: 0.25rem;
 }
 
-.header-container {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  width: calc(100% + 0.5rem);
-  margin: -0.5rem 0 0 -0.5rem;
-  @apply md:w-[calc(100%+1rem)] md:-ml-4;
+.select:focus {
+  outline: #ffffff solid 2px;
+  outline-offset: 2px;
 }
