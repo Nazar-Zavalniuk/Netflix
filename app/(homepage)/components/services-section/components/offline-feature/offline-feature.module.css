@@ -1,0 +1,65 @@
+.animationWrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin: 0 auto;
+  background: #000000;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 60%;
+  min-width: 15rem;
+  padding: 0.25rem 0.65rem;
+  border: 2px solid #808080b3;
+  box-shadow: 0 0 2em 0 #000000;
+  border-radius: 0.75rem;
+  box-sizing: content-box;
+  z-index: 10;
+}
+
+.downloadImg {
+  width: 3rem;
+  height: 3rem;
+  outline: 2px solid #000000;
+  outline-offset: -2px;
+  display: block;
+  background: url(https://vimsxaud7lt1te1j.public.blob.vercel-storage.com/download-icon-haltAgQ2YYLql0mIzMxIJ2hI8anpom.gif)
+    center center no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  content: "";
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+@media (min-width: 600px) {
+  .animationWrapper {
+    padding: 0.35rem 0.75rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .animationWrapper {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .animationWrapper {
+    width: 50%;
+  }
+}
