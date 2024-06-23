@@ -1,5 +1,6 @@
+import { SignUpForm } from "../sing-up-form";
+
 import { Background } from "./components/background";
-import { SignUpForm } from "./components/sing-up-form";
 import styles from "./get-started-section.module.css";
 
 export function GetStartedSection() {
