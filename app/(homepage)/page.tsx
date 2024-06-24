@@ -1,3 +1,4 @@
+import { Footer } from "./components/footer";
 import { FrequentlyQuestions } from "./components/frequently-questions";
 import { GetStartedSection } from "./components/get-started-section";
 import { Header } from "./components/header";
@@ -12,6 +13,7 @@ export default function Homepage() {
         <ServicesSection />
         <FrequentlyQuestions />
       </main>
+      <Footer />
     </>
   );
 }
