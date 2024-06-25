@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 
 import { IQuestion } from "../../types";
 import { Question } from "../question";
@@ -15,8 +15,8 @@ export function QuestionsList(props: QuestionsListProps) {
 
   const [expandedAnswerId, setExpandedAnswerId] = useState<null | number>(null);
 
-  const createHandleAnswerVisibility = useCallback(
-    (answerId: number) => () => {
+  const handleAnswerVisibility = useCallback(
+    (answerId: number) => {
       const isSameAnswerId = answerId === expandedAnswerId;
 
       if (isSameAnswerId) {
@@ -38,18 +38,16 @@ export function QuestionsList(props: QuestionsListProps) {
 
         const showAnswer = index === expandedAnswerId;
 
-        const toggleAnswerVisibility = createHandleAnswerVisibility(index);
-
         return (
-          <Fragment key={question}>
-            <Question
-              ariaControlsSuffix={ariaControlsSuffix}
-              showAnswer={showAnswer}
-              onAnswerVisibility={toggleAnswerVisibility}
-              question={question}
-              answer={answer}
-            />
-          </Fragment>
+          <Question
+            key={question}
+            ariaControlsSuffix={ariaControlsSuffix}
+            showAnswer={showAnswer}
+            index={index}
+            onAnswerVisibility={handleAnswerVisibility}
+            question={question}
+            answer={answer}
+          />
         );
       })}
     </ul>

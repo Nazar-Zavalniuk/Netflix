@@ -1,3 +1,6 @@
+"use client";
+
+import { useCallback } from "react";
 import clsx from "clsx";
 
 import { IQuestion } from "../../types";
@@ -9,17 +12,23 @@ import { formatAnswer } from "./utils/format-answer";
 interface QuestionProps extends IQuestion {
   ariaControlsSuffix: string;
   showAnswer: boolean;
-  onAnswerVisibility: VoidFunction;
+  index: number;
+  onAnswerVisibility: (answerId: number) => void;
 }
 
 export function Question(props: QuestionProps) {
   const {
     ariaControlsSuffix,
     showAnswer,
+    index,
     onAnswerVisibility,
     answer,
     question,
   } = props;
+
+  const handleAnswerVisibility = useCallback(() => {
+    onAnswerVisibility(index);
+  }, [index, onAnswerVisibility]);
 
   const formattedAnswer = formatAnswer(answer);
 
@@ -35,7 +44,7 @@ export function Question(props: QuestionProps) {
           aria-controls={`content${ariaControlsSuffix}`}
           id={`button${ariaControlsSuffix}`}
           type="button"
-          onClick={onAnswerVisibility}
+          onClick={handleAnswerVisibility}
           className={styles.btn}
         >
           <span>{question}</span>
