@@ -116,7 +116,21 @@
 }
 
 @keyframes autoFillStart {
+  from {
+    background-color: #161616b3;
+  }
+
+  to {
+    background-color: #465a7e66;
+  }
 }
 
 @keyframes autoFillCancel {
+  from {
+    background-color: #161616b3;
+  }
+
+  to {
+    background-color: #465a7e66;
+  }
 }
