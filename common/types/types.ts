@@ -3,3 +3,7 @@ export interface IIcon {
   height?: number;
   className?: string;
 }
+
+export interface IChildren {
+  children: React.ReactNode;
+}
