@@ -7,3 +7,5 @@ export interface IIcon {
 export interface IChildren {
   children: React.ReactNode;
 }
+
+export type SetStateFunc<T> = (value: T) => void;

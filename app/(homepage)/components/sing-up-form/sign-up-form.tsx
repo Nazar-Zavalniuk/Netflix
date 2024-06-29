@@ -1,6 +1,6 @@
 import { Button } from "@/common/components/button";
+import { FormInput } from "@/common/components/form-input";
 
-import { Input } from "./components/input";
 import ChevronRightIcon from "./icons/chevron-right";
 import styles from "./sign-up-form.module.css";
 
@@ -21,7 +21,15 @@ export function SignUpForm({ className }: SignUpFormProps) {
             membership.
           </h3>
           <div className={styles.actionBlock}>
-            <Input />
+            <FormInput
+              label="Email address"
+              id="email-input"
+              type="email"
+              name="email"
+              autoComplete="email"
+              minLength={5}
+              maxLength={50}
+            />
             <Button role="button" type="submit" className={styles.btn}>
               Get Started
               <div aria-hidden={true} className="inline-block">

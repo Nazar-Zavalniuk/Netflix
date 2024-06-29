@@ -1,4 +1,4 @@
-import { Header } from "../../common/components/header";
+import { Header } from "@/common/components/header";
 
 export default function Login() {
   return (
