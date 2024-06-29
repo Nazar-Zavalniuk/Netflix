@@ -17,7 +17,7 @@
   transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
 }
 
-.btn:focus {
+.btn:focus-visible {
   outline-style: solid;
   outline-width: 2px;
   outline-offset: 2px;

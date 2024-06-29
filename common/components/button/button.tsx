@@ -6,19 +6,14 @@ interface ButtonProps {
   children: React.ReactNode;
   href?: string;
   className?: string;
-  role?: string;
+  role?: React.AriaRole;
   id?: string;
   type?: "button" | "reset" | "submit" | undefined;
 }
 
-export function Button({
-  children,
-  href,
-  className,
-  role,
-  id,
-  type,
-}: ButtonProps) {
+export function Button(props: ButtonProps) {
+  const { children, href, className, role, id, type } = props;
+
   if (href) {
     return (
       <Link

@@ -1,6 +1,8 @@
+import { IChildren } from "@/common/types";
+
 import styles from "./header-wrapper.module.css";
 
-export function HeaderWrapper({ children }: { children: React.ReactNode }) {
+export function HeaderWrapper({ children }: IChildren) {
   return (
     <div className="relative h-0 overflow-visible z-10">
       <header className={styles.header}>

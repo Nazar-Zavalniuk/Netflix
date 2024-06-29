@@ -1,11 +1,8 @@
 import { roboto, ubuntu } from "@/common/fonts";
 import "./globals.css";
+import { IChildren } from "@/common/types";
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<IChildren>) {
   return (
     <html
       lang="en"

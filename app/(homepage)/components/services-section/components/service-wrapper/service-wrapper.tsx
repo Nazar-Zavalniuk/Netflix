@@ -1,6 +1,8 @@
+import { IChildren } from "@/common/types";
+
 import styles from "./service-wrapper.module.css";
 
-export function ServiceWrapper({ children }: { children: React.ReactNode }) {
+export function ServiceWrapper({ children }: IChildren) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>{children}</div>
