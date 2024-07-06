@@ -1,64 +1,39 @@
 "use client";
 
-import { useCallback } from "react";
+import { Dispatch, HTMLInputTypeAttribute } from "react";
+import clsx from "clsx";
 
-import { IInput } from "../../types";
-import { SetStateFunc } from "@/common/types";
+import { ActionTypes, IInput } from "../../types";
 
+import useInputField from "./hooks/use-input-field";
 import styles from "./input-field.module.css";
 
 interface InputFieldProps extends IInput {
   value: string;
-  onSetValue: SetStateFunc<string>;
-  onSetInputInteraction: SetStateFunc<boolean>;
-  onSetAutofill: SetStateFunc<boolean>;
+  primaryType: HTMLInputTypeAttribute;
+  onDispatch: Dispatch<ActionTypes>;
 }
 
 export function InputField(props: InputFieldProps) {
-  const { value, onSetValue, onSetInputInteraction, onSetAutofill } = props;
+  const { onDispatch, size, primaryType, ...inputProps } = props;
 
-  const handleChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      onSetValue(e.target.value);
-    },
-    [onSetValue]
-  );
+  const handlers = useInputField(onDispatch);
 
-  const handleFocus = useCallback(() => {
-    onSetInputInteraction(true);
-  }, [onSetInputInteraction]);
-
-  const handleBlur = useCallback(() => {
-    onSetInputInteraction(false);
-  }, [onSetInputInteraction]);
-
-  const handleAnimationStart = useCallback(
-    (e: React.AnimationEvent<HTMLInputElement>) => {
-      const autofillStart = e.animationName.includes("autoFillStart");
-
-      if (autofillStart) {
-        onSetAutofill(true);
-      } else {
-        onSetAutofill(false);
-      }
-    },
-    [onSetAutofill]
+  const inputStyle = clsx(
+    styles.input,
+    size === "small" && styles.smallInput,
+    size === "normal" && styles.normalInput,
+    { "mr-8": primaryType === "password" }
   );
 
   return (
     <input
-      onFocus={handleFocus}
-      onBlur={handleBlur}
-      onAnimationStart={handleAnimationStart}
-      onChange={handleChange}
-      value={value}
-      autoComplete={props.autoComplete}
-      minLength={props.minLength}
-      maxLength={props.maxLength}
-      name={props.name}
-      type={props.type}
-      id={props.id}
-      className={styles.input}
+      {...inputProps}
+      className={inputStyle}
+      onFocus={handlers.handleFocus}
+      onBlur={handlers.handleBlur}
+      onAnimationStart={handlers.handleAnimationStart}
+      onChange={handlers.handleChange}
     />
   );
 }

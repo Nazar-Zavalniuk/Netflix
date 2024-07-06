@@ -29,6 +29,7 @@ export function SignUpForm({ className }: SignUpFormProps) {
               autoComplete="email"
               minLength={5}
               maxLength={50}
+              size="small"
             />
             <Button role="button" type="submit" className={styles.btn}>
               Get Started

@@ -12,14 +12,17 @@
 }
 
 .input:focus {
-  outline: #ffffff 2px solid;
-  outline-offset: 2px;
+  outline: none;
 }
 
 @media (min-width: 600px) {
-  .input {
+  .smallInput {
     padding: 1.5rem 1rem 0.5rem;
   }
+}
+
+.normalInput {
+  padding: 1.5rem 1rem 0.5rem;
 }
 
 /* We slow down the standard styles that the browser applies to an element */
@@ -37,15 +40,15 @@
 /* JavaScript can capture 'animationstart' events */
 .input:-webkit-autofill,
 .input:autofill {
-  animation-name: autoFillStart;
+  animation-name: autofillStart;
 }
 
 .input:not(-webkit-autofill),
 .input:not(autofill) {
-  animation-name: autoFillCancel;
+  animation-name: autofillCancel;
 }
 
-@keyframes autoFillStart {
+@keyframes autofillStart {
   from {
     background-color: #161616b3;
   }
@@ -55,7 +58,7 @@
   }
 }
 
-@keyframes autoFillCancel {
+@keyframes autofillCancel {
   from {
     background-color: #161616b3;
   }
