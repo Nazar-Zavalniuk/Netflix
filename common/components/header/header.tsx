@@ -4,7 +4,7 @@ import { LanguageSelect } from "./components/language-select";
 import { Logo } from "./components/logo";
 import { SignInButton } from "./components/sign-in-button";
 
-interface HeaderProps {
+export interface HeaderProps {
   logoType?: "logo" | "link logo";
   showLanguageSelect?: boolean;
   showSignInButton?: boolean;

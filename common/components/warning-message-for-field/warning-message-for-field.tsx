@@ -1,12 +1,12 @@
 import XCircleIcon from "./icons/x-circle";
-import styles from "./warning-message.module.css";
+import styles from "./warning-message-for-field.module.css";
 
 interface WarningMessageProps {
   showMessage: boolean;
   message: string;
 }
 
-export function WarningMessage(props: WarningMessageProps) {
+export function WarningMessageForField(props: WarningMessageProps) {
   const { showMessage, message } = props;
 
   if (!showMessage) {

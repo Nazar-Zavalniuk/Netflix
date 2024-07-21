@@ -1,4 +1,9 @@
-.formContainer {
+.wrapper {
+  margin: 0 auto;
+  padding-top: 5.75rem;
+}
+
+.container {
   display: flex;
   flex-direction: column;
   padding: 0 5% 1.875rem;
@@ -10,7 +15,11 @@
 }
 
 @media (min-width: 600px) {
-  .formContainer {
+  .wrapper {
+    max-width: 28.125rem;
+  }
+
+  .container {
     padding: 3rem 4.25rem;
   }
 }

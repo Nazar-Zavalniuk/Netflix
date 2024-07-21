@@ -3,9 +3,10 @@
 import { useReducer } from "react";
 import clsx from "clsx";
 
+import { WarningMessageForField } from "../warning-message-for-field";
+
 import { InputField } from "./components/input-field";
 import { TogglePasswordVisibility } from "./components/toggle-password-visibility";
-import { WarningMessage } from "./components/warning-message";
 import styles from "./form-input.module.css";
 import { initialState, mainReducer } from "./reducers";
 import { IInput } from "./types";
@@ -56,7 +57,10 @@ export function FormInput(props: FormInputProps) {
         />
         <div aria-hidden={true} className={bgInputStyle} />
       </div>
-      <WarningMessage showMessage={!isValueValid} message="temporary message" />
+      <WarningMessageForField
+        showMessage={!isValueValid}
+        message="temporary message"
+      />
       <TogglePasswordVisibility
         showToggle={showTogglePassVisibility}
         isPasswordVisible={state.showPassword}
