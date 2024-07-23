@@ -1,6 +1,6 @@
 import { ResetMethod } from "../../types";
-import { PhoneInput } from "../phone-input";
 import { FormInput } from "@/common/components/form-input";
+import { PhoneInput } from "@/common/components/phone-input";
 
 interface InputFieldProps {
   inputType: ResetMethod;

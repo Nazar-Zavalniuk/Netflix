@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Checkbox } from "./components/checkbox";
+import { Checkbox } from "@/common/components/checkbox";
 
 export function Footer() {
   return (

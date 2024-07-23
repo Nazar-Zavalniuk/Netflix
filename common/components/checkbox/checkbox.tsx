@@ -2,8 +2,9 @@
 
 import { useCallback, useState } from "react";
 
+import CheckmarkIcon from "@/common/icons/checkmark";
+
 import styles from "./checkbox.module.css";
-import CheckmarkIcon from "./icons/checkmark";
 
 interface CheckboxProps {
   id: string;
