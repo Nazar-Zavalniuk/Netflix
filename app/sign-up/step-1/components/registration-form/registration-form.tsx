@@ -12,7 +12,7 @@ export function RegistrationForm() {
         <Header
           currentStep={1}
           amountOfSteps={3}
-          title="Fill out the fields below to start your membership"
+          title="Fill out the fields below to start your membership."
         />
         <div>
           <p>Just a few more steps and you&apos;re done!</p>
