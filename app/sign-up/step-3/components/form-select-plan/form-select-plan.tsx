@@ -6,10 +6,8 @@ import { PlansProvider } from "../../context";
 import { MobilePlanSelect } from "../mobile-plan-select";
 import { PCPlanSelect } from "../pc-plan-select";
 
-const initialFormType = window.innerWidth < 1050 ? "mobile" : "pc";
-
 export function FormSelectPlan() {
-  const [formType, setFormType] = useState(initialFormType);
+  const [formType, setFormType] = useState<"mobile" | "pc">();
 
   useEffect(() => {
     const resizeObserver = new ResizeObserver(() => {
