@@ -113,3 +113,8 @@ bun dev
 <p>The easiest way to deploy your Next.js app is to use the <a href="https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme">Vercel Platform</a> from the creators of Next.js.</p>
 
 <p>Check out our <a href="https://nextjs.org/docs/deployment">Next.js deployment documentation</a> for more details.</p>
+
+<br/>
+<p align="right">
+<em>Author <a href="https://github.com/Nazar-Zavalniuk">Nazar Zavalniuk</a></em>
+</p>
