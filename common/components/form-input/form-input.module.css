@@ -1,0 +1,96 @@
+.wrapper {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  position: relative;
+  color: #ffffff;
+}
+
+.inputContainer {
+  display: inline-flex;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.smallLabel,
+.normalLabel {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: left;
+  opacity: 0.7;
+  pointer-events: none;
+  position: absolute;
+  transform: translateY(0.75rem);
+  left: 1rem;
+  right: 1rem;
+  transition-property: transform, font-size;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+  z-index: 10;
+}
+
+.smallLabelTransform,
+.normalLabelTransform {
+  font-size: 0.75rem;
+  transform: translateY(0.25rem);
+  transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+.normalLabel {
+  transform: translateY(1rem);
+}
+
+.normalLabelTransform {
+  transform: translateY(0.5rem);
+}
+
+.bgInput {
+  display: flex;
+  color: transparent;
+  background-color: #161616b3;
+  border: 0.0625rem solid #808080b3;
+  border-radius: 0.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+}
+
+.bgInputAutofill {
+  background-color: #465a7e66;
+}
+
+.bgValidInput {
+  border-color: #2bb871;
+}
+
+.bgInvalidInput {
+  border-color: #eb3942;
+}
+
+.bgInputInteraction {
+  outline: #ffffff 2px solid;
+  outline-offset: 2px;
+}
+
+@media (min-width: 600px) {
+  .wrapper {
+    width: auto;
+  }
+
+  .smallLabel {
+    transform: translateY(1rem);
+  }
+
+  .smallLabelTransform {
+    transform: translateY(0.5rem);
+  }
+}

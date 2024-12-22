@@ -1,0 +1,19 @@
+.wrapper {
+  margin: 0 auto;
+  padding-top: 5.75rem;
+  max-width: 558px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 0 5% 1.875rem;
+  color: #ffffff;
+}
+
+@media (min-width: 600px) {
+  .container {
+    padding: 0 1.5rem 2.375rem;
+  }
+}

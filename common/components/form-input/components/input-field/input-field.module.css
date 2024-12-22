@@ -1,0 +1,69 @@
+.input {
+  padding: 1.25rem 1rem 0.25rem;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: inherit !important;
+  appearance: none;
+  color: inherit;
+  background: transparent;
+  border: 0px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.input:focus {
+  outline: none;
+}
+
+@media (min-width: 600px) {
+  .smallInput {
+    padding: 1.5rem 1rem 0.5rem;
+  }
+}
+
+.normalInput {
+  padding: 1.5rem 1rem 0.5rem;
+}
+
+/* We slow down the standard styles that the browser applies to an element */
+/* during autofill for a day so that the element matches the overall style of the site */
+.input:-webkit-autofill,
+.input:autofill {
+  transition-property: background-color, color;
+  transition-duration: 86400s;
+  transition-delay: 0s;
+  transition-timing-function: ease-in-out;
+  background-image: none !important;
+}
+
+/* Expose a hook for JavaScript when auto fill is shown. */
+/* JavaScript can capture 'animationstart' events */
+.input:-webkit-autofill,
+.input:autofill {
+  animation-name: autofillStart;
+}
+
+.input:not(-webkit-autofill),
+.input:not(autofill) {
+  animation-name: autofillCancel;
+}
+
+@keyframes autofillStart {
+  from {
+    background-color: #161616b3;
+  }
+
+  to {
+    background-color: #465a7e66;
+  }
+}
+
+@keyframes autofillCancel {
+  from {
+    background-color: #161616b3;
+  }
+
+  to {
+    background-color: #465a7e66;
+  }
+}

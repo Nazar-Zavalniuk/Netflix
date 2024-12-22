@@ -1,0 +1,13 @@
+.buttonWrapper {
+  flex: 1;
+  padding: 0.5rem 0.5rem 0;
+  cursor: pointer;
+  border-radius: 1.125rem;
+  border: 1px solid #80808066;
+  transition: box-shadow 250ms ease-in-out 0s;
+}
+
+.chosen {
+  box-shadow: #ffffff99 0px 2px 10px 0px;
+  transition: box-shadow 250ms ease-in-out 0s;
+}

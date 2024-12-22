@@ -1,0 +1,32 @@
+.wrapper {
+  display: inline-flex;
+  flex: 0 auto;
+  width: auto;
+  margin: 0.5rem 0 0 0.5rem;
+  position: relative;
+}
+
+.icon {
+  display: block;
+  fill: #e50914;
+  overflow: hidden;
+}
+
+.text {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+@media (min-width: 960px) {
+  .wrapper {
+    margin: 0.5rem 0 0 1rem;
+    flex: 0 0 calc(33.333% - 1rem);
+  }
+
+  .icon {
+    width: 9.25rem;
+    height: 2.5rem;
+  }
+}
